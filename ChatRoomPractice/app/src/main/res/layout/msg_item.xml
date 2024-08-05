@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <!-- 左侧消息布局 -->
+    <LinearLayout
+        android:id="@+id/item_message_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/left_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="top"
+            android:src="@drawable/userphoto2" />
+
+        <LinearLayout
+            android:id="@+id/left_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/msg_left"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/left_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="杜月朋"
+                android:textColor="#0057d2"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/left_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="测试测试文本测试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本本测试文本测试文本测试文本"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/left_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_gravity=""
+                android:text="12:34 PM"
+                android:textColor="#8c8c8c"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 右侧消息布局 -->
+    <LinearLayout
+        android:id="@+id/item_message_right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:id="@+id/right_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/msg_right"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/right_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginBottom="4dp"
+                android:text="张扬"
+                android:textColor="#202020"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/right_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="测试测试文本测试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本本测试文本测试文本测试文本"
+                android:textColor="#0057d2"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/right_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="12:34 PM"
+                android:textColor="#8c8c8c"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/right_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="top"
+            android:src="@drawable/userphoto1" />
+
+    </LinearLayout>
+
+</LinearLayout>
