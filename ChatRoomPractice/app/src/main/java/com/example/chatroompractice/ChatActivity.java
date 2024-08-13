@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -48,7 +49,6 @@ public class ChatActivity extends AppCompatActivity {
     private DataOutputStream dos = null;
     private static ChatActivity context;
     private Runnable checkOnlineCountRunnable;
-    private Handler handler = new Handler(Looper.getMainLooper());
     private CountDownLatch latch = new CountDownLatch(1);
 
     @Override
@@ -107,6 +107,10 @@ public class ChatActivity extends AppCompatActivity {
         setButtonAnimation(binding.btnSend);
         binding.btnSend.setOnClickListener(v -> {
             String content = binding.edText.getText().toString();
+            if (content.contains("|")) {
+                Toast.makeText(this, "不能包含|", Toast.LENGTH_SHORT).show();
+                return;
+            }
             if (!TextUtils.isEmpty(content)) {
                 Msg msg = new Msg(content, Msg.TYPE_SENT, username, getFormattedCurrentTime(), imageResourceId);
                 msgList.add(msg);

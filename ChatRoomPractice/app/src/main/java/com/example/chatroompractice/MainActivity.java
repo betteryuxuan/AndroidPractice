@@ -42,14 +42,18 @@ public class MainActivity extends AppCompatActivity {
         binding.btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(TextUtils.isEmpty(binding.etUsername.getText().toString())){
+                if (TextUtils.isEmpty(binding.etUsername.getText().toString())) {
                     Toast.makeText(MainActivity.this, "请输入用户名", Toast.LENGTH_SHORT).show();
                     return;
-                }else if(TextUtils.isEmpty(binding.etIp.getText().toString())){
+                } else if (TextUtils.isEmpty(binding.etIp.getText().toString())) {
                     Toast.makeText(MainActivity.this, "请输入IP地址", Toast.LENGTH_SHORT).show();
                     return;
-                }else if(TextUtils.isEmpty(binding.etPort.getText().toString())){
+                } else if (TextUtils.isEmpty(binding.etPort.getText().toString())) {
                     Toast.makeText(MainActivity.this, "请输入端口号", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (binding.etUsername.getText().toString().contains("|")) {
+                    Toast.makeText(MainActivity.this, "用户名不能包含|", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
